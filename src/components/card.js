@@ -43,8 +43,8 @@ export const Card = ({ children, style, onVote, id, ...props }) => {
 
   const flyAway = (min) => {
     const flyAwayDistance = (direction) => {
-      const parentWidth = cardElem.current.parentNode.getBoundingClientRect()
-        .width;
+      const parentWidth =
+        cardElem.current.parentNode.getBoundingClientRect().width;
       const childWidth = cardElem.current.getBoundingClientRect().width;
       return direction === "left"
         ? -parentWidth / 2 - childWidth / 2
@@ -54,13 +54,13 @@ export const Card = ({ children, style, onVote, id, ...props }) => {
     if (direction && Math.abs(velocity) > min) {
       setConstrained(false);
       controls.start({
-        x: flyAwayDistance(direction)
+        x: flyAwayDistance(direction),
       });
     }
   };
 
   useEffect(() => {
-    const unsubscribeX = x.on("change" ,() => {
+    const unsubscribeX = x.on("change", () => {
       if (cardElem.current) {
         const childNode = cardElem.current;
         const parentNode = cardElem.current.parentNode;
@@ -75,8 +75,13 @@ export const Card = ({ children, style, onVote, id, ...props }) => {
   return (
     <StyledCard
       animate={controls}
-      dragConstraints={constrained && { left: 0, right: 0, top: 0, bottom: 0 }}
-      dragElastic={1}
+      // dragConstraints={
+      //   constrained && { left: 200, right: 0, top: 0, bottom: 0 }
+      // }
+      // dragElastic={1}
+      drag
+      dragConstraints={constrained && { left: 0, right: 0 }}
+      dragElastic={3}
       ref={cardElem}
       style={{ x }}
       onDrag={getTrajectory}
