@@ -1,0 +1,13 @@
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+.allScreen {
+  width: 100% !important; 
+}
+
+

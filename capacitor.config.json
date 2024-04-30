@@ -1,0 +1,8 @@
+{
+    "appId": "io.ionic.GigleIt",
+    "appName": "GigleIt",
+    "bundledWebRuntime": false,
+    "npmClient": "npm",
+    "webDir": "build",
+    "cordova": {}
+  }

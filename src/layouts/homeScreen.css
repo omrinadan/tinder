@@ -1,0 +1,17 @@
+/* .cardstyle {
+    background-image: URL(https://img.icons8.com/color/452/GeeksforGeeks.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #55ccff;
+    box-shadow: 5px 10px 18px #888888;
+    border-radius: 10;
+    height: 300;
+} */
+.HomeScreen {
+    font-family: sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  

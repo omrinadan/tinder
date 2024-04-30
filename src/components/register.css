@@ -1,0 +1,9 @@
+.floatingPadding {
+    height: 50px !important;
+}
+
+.A {
+    position: fixed;
+    width: fit-content;
+    height: fit-content;
+}
